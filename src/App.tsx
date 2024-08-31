@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import ListNovel from "./pages/ListNovel";
 import ListFilm from "./pages/ListFilm";
@@ -10,7 +11,7 @@ import Modern from "./pages/Modern";
 function App() {
   return (
     <>
-      <Routes>
+      <Router>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/list-truyen" element={<ListNovel />} />
@@ -19,7 +20,7 @@ function App() {
         <Route path="/review-phim" element={<ReviewFilm />} />
         <Route path="/list-co-dai" element={<Ancient />} />
         <Route path="/list-hien-dai" element={<Modern />} />
-      </Routes>
+      </Router>
     </>
   );
 }
